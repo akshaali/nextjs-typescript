@@ -1,4 +1,4 @@
-import actionTypes from "../Constants"
+import actionTypes from "../constants"
 import { HYDRATE } from 'next-redux-wrapper'
 
 

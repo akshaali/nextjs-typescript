@@ -1,9 +1,9 @@
-import actionTypes from "../Constants";
+import actionTypes from "../constants";
 
 export const fetchData = () => {
-    return {type: actionTypes.FETCH_POST_DATA}
-}
+  return { type: actionTypes.FETCH_POST_DATA };
+};
 
 export const saveData = (payload: Array<any>) => {
-    return {type: actionTypes.SAVE_FETCHED_DATA, payload }
-}
+  return { type: actionTypes.SAVE_FETCHED_DATA, payload };
+};
