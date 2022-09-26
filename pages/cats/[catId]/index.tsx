@@ -3,13 +3,17 @@ import { useRouter } from "next/router";
 import { result } from "@types";
 
 const CatPost = (props: { res: result }) => {
-  console.log(props);
   const router = useRouter();
   const catID = router.query.catId;
+
+  console.log('Datattta', props);
 
   const handleDetailsClick = () => {
     router.push(`/cats/${catID}//publicReview/${catID}`);
   };
+  if (router.isFallback) {
+    return <h1>Loading.....</h1>;
+  }
 
   return (
     <div>
@@ -28,15 +32,19 @@ export const getStaticPaths = async () => {
   const paths = result.map((post: result) => {
     return { params: { catId: `${post.id}` } };
   });
-  return {  paths: paths, fallback: false };
+  return { paths: paths, fallback: 'blocking' };
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { params = {} } = context;
   const res = await fetch(
-    `https://api.thecatapi.com/v1/images/${params.catId}`
+    `https://jsonplaceholder.typicode.com/posts/${params.catId}`
   );
   const result = await res.json();
+  // if (!result.id) {
+  //   return { notFound: true };
+  // }
+ 
   return { props: { res: result } };
 };
 
