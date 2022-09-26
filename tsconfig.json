@@ -18,14 +18,19 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
+      "@components":["src/components/index.ts"],
       "@components/*":["src/components/*"],
       "@constants/*":["src/constants/*"],
       "@customHooks/*":["src/customHooks/*"],
       "@hoc/*":["src/hoc/*"],
       "@redux/*":["src/redux/*"],
       "@utils/*":["src/utils/*"],
+      "@utils":["src/utils/index.ts"],
+      "@types/*":["src/types/*"],
+      "@types":["src/types/index.ts"],
+      "@pages/*":["pages/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jest.config.js", "__test__/firstpage.test.ts"],
   "exclude": ["node_modules"]
 }
