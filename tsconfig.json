@@ -31,6 +31,6 @@
       "@pages/*":["pages/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jest.config.js", "__test__/firstpage.test.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jest.config.js", "__test__/firstpage.test.tsx"],
   "exclude": ["node_modules"]
 }
