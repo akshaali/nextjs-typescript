@@ -1,5 +1,5 @@
 import { render, screen, cleanup } from "@testing-library/react";
-import Home from "../pages/index";
+import Home from '@pages/index';
 
 // test("Should render the home page", () => {
 //   render(<Home/>);

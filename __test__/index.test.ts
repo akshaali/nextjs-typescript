@@ -58,10 +58,10 @@ test("the fetch fails with an error", async () => {
   }
 });
 
-test("the data is peanut butter", async () => {
-  await expect(fetchData()).resolves.toContain("name");
-});
+// test("the data is peanut butter", async () => {
+//   await expect(fetchData()).resolves.toContain("name");
+// });
 
-test("the fetch fails with an error", async () => {
-  await expect(fetchData()).rejects.toMatch("error");
-});
+// test("the fetch fails with an error", async () => {
+//   await expect(fetchData()).rejects.toMatch("error");
+// });
